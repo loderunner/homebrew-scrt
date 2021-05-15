@@ -5,29 +5,29 @@
 class Scrt < Formula
   desc "A secret manager for the command-line"
   homepage "https://github.com/loderunner/scrt"
-  version "0.0.0-alpha2"
+  version "0.0.0-alpha3"
   license "Apache-2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/loderunner/scrt/releases/download/v0.0.0-alpha2/scrt_0.0.0-alpha2_darwin_x86_64.tar.gz"
-    sha256 "15cc1fc538fafd838a32cd3a8dcb807571843a6049ac57cc611309b1f5716779"
+    url "https://github.com/loderunner/scrt/releases/download/v0.0.0-alpha3/scrt_0.0.0-alpha3_darwin_x86_64.tar.gz"
+    sha256 "a92d111e0bdd61e477e687e3223c75109015527764c4066ea0f1ca7c3dff9a3c"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/loderunner/scrt/releases/download/v0.0.0-alpha2/scrt_0.0.0-alpha2_darwin_arm64.tar.gz"
-    sha256 "e868a566b8654330fd9e1f8936045ce2c47226c25887a4aa76fc6b06a42a8515"
+    url "https://github.com/loderunner/scrt/releases/download/v0.0.0-alpha3/scrt_0.0.0-alpha3_darwin_arm64.tar.gz"
+    sha256 "aa9aa9a867057dee53f86269b093695e31f0e9e0743db1dd181f81d515bee380"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/loderunner/scrt/releases/download/v0.0.0-alpha2/scrt_0.0.0-alpha2_linux_x86_64.tar.gz"
-    sha256 "9e5b960b2ad988cdd880d7c0b8ecd4f3872d26773973439fb4e210e040018eb4"
+    url "https://github.com/loderunner/scrt/releases/download/v0.0.0-alpha3/scrt_0.0.0-alpha3_linux_x86_64.tar.gz"
+    sha256 "01b5619dc39ff0d58ccd0ac22a03cac9c9b4c83b71d85b921d267c6f28086331"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/loderunner/scrt/releases/download/v0.0.0-alpha2/scrt_0.0.0-alpha2_linux_armv6.tar.gz"
-    sha256 "5ef1382d48307f4f722062ea5ca68e14e770e740e072f7ce109f30d3daf5ab2c"
+    url "https://github.com/loderunner/scrt/releases/download/v0.0.0-alpha3/scrt_0.0.0-alpha3_linux_armv6.tar.gz"
+    sha256 "551d786b1884cb92ea2f5f49a4ecdd5b2bb7bd12f6728c602fa8bb54ee25ea2c"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/loderunner/scrt/releases/download/v0.0.0-alpha2/scrt_0.0.0-alpha2_linux_arm64.tar.gz"
-    sha256 "0cbb0f5ae8a5dd78fc46994399404b2a90fe0b8cdfa135257391d9170f69806d"
+    url "https://github.com/loderunner/scrt/releases/download/v0.0.0-alpha3/scrt_0.0.0-alpha3_linux_arm64.tar.gz"
+    sha256 "1dd857f6478f0b49c6e0d281801f807a6eef46887c90190c6559f9dccd0e2e1c"
   end
 
   def install
