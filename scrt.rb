@@ -5,29 +5,29 @@
 class Scrt < Formula
   desc "A secret manager for the command-line"
   homepage "https://github.com/loderunner/scrt"
-  version "0.0.3"
+  version "0.0.4"
   license "Apache-2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/loderunner/scrt/releases/download/v0.0.3/scrt_0.0.3_darwin_x86_64.tar.gz"
-    sha256 "d5087e17d10375bf16a41d63aac0d0bab47b8eca3e11a44750abd3c4770e3bb9"
+    url "https://github.com/loderunner/scrt/releases/download/v0.0.4/scrt_0.0.4_darwin_x86_64.tar.gz"
+    sha256 "630309eb4405bd48d07257be5d8e80ac26682629eb8692afc958577356acccb1"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/loderunner/scrt/releases/download/v0.0.3/scrt_0.0.3_darwin_arm64.tar.gz"
-    sha256 "5556d3c58a2b046cd3bee29a1370563043b02419343ba87f85bf571ecec47fc2"
+    url "https://github.com/loderunner/scrt/releases/download/v0.0.4/scrt_0.0.4_darwin_arm64.tar.gz"
+    sha256 "23fc69bdb5d408464261e65132c5e4327beab588f55c55b6fcee85bf6fe5e9bf"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/loderunner/scrt/releases/download/v0.0.3/scrt_0.0.3_linux_x86_64.tar.gz"
-    sha256 "51c0be05b6ca6d686cb71c05f8ca7c19ac546e57ca1d3805b5518f54f7ea2620"
+    url "https://github.com/loderunner/scrt/releases/download/v0.0.4/scrt_0.0.4_linux_x86_64.tar.gz"
+    sha256 "bbb90db28da6d9896873255899e0b1265e4e6e736bf9c81d97d9cb627c82c7d7"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/loderunner/scrt/releases/download/v0.0.3/scrt_0.0.3_linux_armv6.tar.gz"
-    sha256 "615630b5ed4a28734ed7ef338a9bdcd69c77de75132c31f7af5dba758fedab9f"
+    url "https://github.com/loderunner/scrt/releases/download/v0.0.4/scrt_0.0.4_linux_armv6.tar.gz"
+    sha256 "f82f37b4871ccb42c34a4370c81b6ba2d26bd9a81d8cbf5f167de3ee98b8e5da"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/loderunner/scrt/releases/download/v0.0.3/scrt_0.0.3_linux_arm64.tar.gz"
-    sha256 "5d5335da26b4b9a49373af290dc055d2c2fbdbe8609fe79c2d70679d87b13d65"
+    url "https://github.com/loderunner/scrt/releases/download/v0.0.4/scrt_0.0.4_linux_arm64.tar.gz"
+    sha256 "f9e09c9c69ba9d533162f38b571a61c1986bca6105fc8a3f36154d9bcb736065"
   end
 
   def install
