@@ -5,29 +5,34 @@
 class Scrt < Formula
   desc "A secret manager for the command-line"
   homepage "https://github.com/loderunner/scrt"
-  version "0.2.0"
+  version "0.3.2"
   license "Apache-2.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/loderunner/scrt/releases/download/v0.2.0/scrt_0.2.0_darwin_x86_64.tar.gz"
-    sha256 "2b47e98466eef3dd81d32d4d662d9baafa4afdf08ef641356463dc6e3c50ac8c"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/loderunner/scrt/releases/download/v0.3.2/scrt_0.3.2_darwin_x86_64.tar.gz"
+      sha256 "636929ed3ac8d1e45e3735d7379559a753dace4eac09771a22ef08c52b4111b5"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/loderunner/scrt/releases/download/v0.3.2/scrt_0.3.2_darwin_arm64.tar.gz"
+      sha256 "b0a0459e9ae0f7003a242f7e2d01961bd26c2fb8244dba0618b6ae4b00e62e66"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/loderunner/scrt/releases/download/v0.2.0/scrt_0.2.0_darwin_arm64.tar.gz"
-    sha256 "9a205a95632dbdea98213a9948221893e2d282a888c36d4e44f2fe06caa0ec54"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/loderunner/scrt/releases/download/v0.2.0/scrt_0.2.0_linux_x86_64.tar.gz"
-    sha256 "11c0d292718ba8fdaf4601b73b4db98674d7cb9c6591c50a609b269b6ee43f5f"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/loderunner/scrt/releases/download/v0.2.0/scrt_0.2.0_linux_armv6.tar.gz"
-    sha256 "c1c50d870d54479751ed6878f2aa678af98df2b38c383d07df2588979a0d5bc4"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/loderunner/scrt/releases/download/v0.2.0/scrt_0.2.0_linux_arm64.tar.gz"
-    sha256 "91855679dea47a2d87bb68578e992258c0248a9784288a85635c15900138f057"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/loderunner/scrt/releases/download/v0.3.2/scrt_0.3.2_linux_x86_64.tar.gz"
+      sha256 "b9199bb8bdd867f50e62e5da67e7096dcd0a7440842c5fa469450f58bbace5fc"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/loderunner/scrt/releases/download/v0.3.2/scrt_0.3.2_linux_armv6.tar.gz"
+      sha256 "c83761620296da1a41ded23f7c823fbb9e82347eaec3d3faab7763001f3baa66"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/loderunner/scrt/releases/download/v0.3.2/scrt_0.3.2_linux_arm64.tar.gz"
+      sha256 "cd1d9ab3045113bb0ab73760ba1f4307d44a7cd3427e02bf14f27d5a38fa636a"
+    end
   end
 
   def install
